@@ -64,6 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.authorizeRequests().antMatchers("/api/auth/**").permitAll().and()
 		.authorizeRequests().antMatchers("/api/auth/facebook/login/").permitAll()
 		.antMatchers("/api/otp/**").permitAll()
+		.antMatchers("/api/post/**").permitAll()
 		.antMatchers("/api/test/**").permitAll()
 		.antMatchers("/api/test/admin/user/**").permitAll()
 		.anyRequest().authenticated();
